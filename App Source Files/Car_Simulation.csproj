@@ -1,0 +1,108 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <None Remove="BrakeLightsOff.png" />
+	  <None Remove="BrakeLightsOn.png" />
+	  <None Remove="Break Lights Off.png" />
+	  <None Remove="DomeLightAutoDoorClosed.jpg" />
+	  <None Remove="DomeLightAutoDoorOpen.jpg" />
+	  <None Remove="DomeLightOff.jpg" />
+	  <None Remove="DomeLightOn.jpg" />
+	  <None Remove="DoorOpenIcon.jpg" />
+	  <None Remove="DoorOpenIcon.png" />
+	  <None Remove="DoorWindowDown.png" />
+	  <None Remove="DoorWindowUp.png" />
+	  <None Remove="DriverinSeatIcon.png" />
+	  <None Remove="DriverNotinSeat.png" />
+	  <None Remove="DriverStickD.jpg" />
+	  <None Remove="DriverStickN.jpg" />
+	  <None Remove="DriverStickP.jpg" />
+	  <None Remove="DriverStickR.jpg" />
+	  <None Remove="HeadLightIcon.png" />
+	  <None Remove="ImageAssets\BrakeLightsOff.png" />
+	  <None Remove="ImageAssets\BrakeLightsOn.png" />
+	  <None Remove="ImageAssets\DomeLightAutoDoorClosed.jpg" />
+	  <None Remove="ImageAssets\DomeLightAutoDoorOpen.jpg" />
+	  <None Remove="ImageAssets\DomeLightOff.jpg" />
+	  <None Remove="ImageAssets\DomeLightOn.jpg" />
+	  <None Remove="ImageAssets\DoorOpenIcon.png" />
+	  <None Remove="ImageAssets\DoorWindowDown.png" />
+	  <None Remove="ImageAssets\DoorWindowUp.png" />
+	  <None Remove="ImageAssets\DriverinSeatIcon.png" />
+	  <None Remove="ImageAssets\DriverNotinSeat.png" />
+	  <None Remove="ImageAssets\DriverStickD.jpg" />
+	  <None Remove="ImageAssets\DriverStickN.jpg" />
+	  <None Remove="ImageAssets\DriverStickP.jpg" />
+	  <None Remove="ImageAssets\DriverStickR.jpg" />
+	  <None Remove="ImageAssets\HeadLightIcon.png" />
+	  <None Remove="ImageAssets\InstruPanelOff.png" />
+	  <None Remove="ImageAssets\InstruPanelOn.png" />
+	  <None Remove="ImageAssets\KeyholeAccessory.png" />
+	  <None Remove="ImageAssets\KeyholeNoKey.png" />
+	  <None Remove="ImageAssets\KeyholeOff.png" />
+	  <None Remove="ImageAssets\KeyholeOn.png" />
+	  <None Remove="ImageAssets\SeatbeltWarningIcon.png" />
+	  <None Remove="ImageAssets\Turn Signal Left.png" />
+	  <None Remove="ImageAssets\Turn Signal Right.png" />
+	  <None Remove="ImageAssets\WiperIconLeft.png" />
+	  <None Remove="ImageAssets\WiperIconRight.png" />
+	  <None Remove="InstruPanelOff.png" />
+	  <None Remove="InstruPanelOn.png" />
+	  <None Remove="KeyholeAccessory.png" />
+	  <None Remove="KeyholeNoKey.png" />
+	  <None Remove="KeyholeOff.png" />
+	  <None Remove="KeyholeOn.png" />
+	  <None Remove="NissanDoorChime.wav" />
+	  <None Remove="RadioContainer.jpg" />
+	  <None Remove="SeatbeltWarningIcon.png" />
+	  <None Remove="SoundAssets\NissanDoorChime.wav" />
+	  <None Remove="Turn Signal Left.png" />
+	  <None Remove="Turn Signal Right.png" />
+    <None Remove="WhiteBackground.jpg" />
+    <None Remove="WindowAssets\WhiteBackground.jpg" />
+    <None Remove="WiperIconLeft.png" />
+    <None Remove="WiperIconRight.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <Resource Include="ImageAssets\BrakeLightsOff.png" />
+	  <Resource Include="ImageAssets\BrakeLightsOn.png" />
+	  <Resource Include="ImageAssets\DomeLightAutoDoorClosed.jpg" />
+	  <Resource Include="ImageAssets\DomeLightAutoDoorOpen.jpg" />
+	  <Resource Include="ImageAssets\DomeLightOff.jpg" />
+	  <Resource Include="ImageAssets\DomeLightOn.jpg" />
+	  <Resource Include="ImageAssets\DoorOpenIcon.png" />
+	  <Resource Include="ImageAssets\DoorWindowDown.png" />
+	  <Resource Include="ImageAssets\DoorWindowUp.png" />
+	  <Resource Include="ImageAssets\DriverinSeatIcon.png" />
+	  <Resource Include="ImageAssets\DriverNotinSeat.png" />
+	  <Resource Include="ImageAssets\DriverStickD.jpg" />
+	  <Resource Include="ImageAssets\DriverStickP.jpg" />
+	  <Resource Include="ImageAssets\DriverStickR.jpg" />
+	  <Resource Include="ImageAssets\HeadLightIcon.png" />
+	  <Resource Include="ImageAssets\InstruPanelOff.png" />
+	  <Resource Include="ImageAssets\InstruPanelOn.png" />
+	  <Resource Include="ImageAssets\KeyholeAccessory.png" />
+	  <Resource Include="ImageAssets\KeyholeNoKey.png" />
+	  <Resource Include="ImageAssets\KeyholeOff.png" />
+	  <Resource Include="ImageAssets\KeyholeOn.png" />
+	  <Resource Include="ImageAssets\SeatbeltWarningIcon.png" />
+	  <Resource Include="ImageAssets\Turn Signal Left.png" />
+	  <Resource Include="ImageAssets\Turn Signal Right.png" />
+	  <Resource Include="ImageAssets\WiperIconLeft.png" />
+	  <Resource Include="ImageAssets\WiperIconRight.png" />
+	  <Content Include="SoundAssets\NissanDoorChime.wav">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Resource Include="ImageAssets\DriverStickN.jpg" />
+	  <Resource Include="WindowAssets\WhiteBackground.jpg" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,103 @@
+﻿<Window x:Name="wdw_Main" x:Class="Car_Simulation.MainWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:local="clr-namespace:Car_Simulation"
+            mc:Ignorable="d"
+            Title="Car Simulation" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ContentRendered="wdw_Main_ContentRendered" HorizontalAlignment="Right" FontSize="12">
+    <Window.LayoutTransform>
+        <TransformGroup>
+            <ScaleTransform/>
+            <SkewTransform/>
+            <RotateTransform/>
+            <TranslateTransform X="0.5" Y="0.5"/>
+        </TransformGroup>
+    </Window.LayoutTransform>
+    <Grid x:Name="grd_Main">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.LayoutTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform/>
+                <TranslateTransform X="0.5" Y="0.5"/>
+            </TransformGroup>
+        </Grid.LayoutTransform>
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/Car_Simulation;component/WindowAssets/WhiteBackground.jpg" Stretch="Fill"/>
+        </Grid.Background>
+        <Rectangle x:Name="rect_container_title" HorizontalAlignment="Left" Height="30" Margin="66,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="137" Fill="#FFDBDADA" Opacity="0.7"/>
+        <Image x:Name="img_Instrument_Panel_On" HorizontalAlignment="Left" Height="299" Margin="243,124,0,0" VerticalAlignment="Top" Width="390" Source="ImageAssets/InstruPanelOn.png"/>
+        <Rectangle x:Name="rect_container_controls" HorizontalAlignment="Left" Height="251" Margin="9,45,0,0" Stroke="Black" VerticalAlignment="Top" Width="268" Fill="#FFDBDADA" Opacity="0.7"/>
+        <Label x:Name="lbl_DriverDoor" Content="Driver Door" HorizontalAlignment="Left" Margin="210,143,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="22" Width="61" FontSize="9" RenderTransformOrigin="0.492,0.839"/>
+        <Label x:Name="lbl_WindshieldWiper" Content="Windshield&#xA;Wiper" HorizontalAlignment="Left" Margin="75,144,0,0" VerticalAlignment="Top" Height="36" Width="62" FontWeight="Bold" FontSize="9"/>
+        <Label x:Name="lbl_GearShift" Content="Gear Shift" HorizontalAlignment="Left" Margin="139,47,0,0" VerticalAlignment="Top" Width="65" FontWeight="Bold" RenderTransformOrigin="0.57,0.488" Height="23" FontSize="9"/>
+        <Label x:Name="lbl_TurnSignal" Content="Turn Signal" HorizontalAlignment="Left" Margin="207,47,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="23" Width="59" FontSize="9" RenderTransformOrigin="0.479,0.628"/>
+        <Label x:Name="lbl_DriverWindow" Content="Driver &#xA;Window" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.22,-1.154" FontWeight="Bold" Height="35" Width="50" FontSize="9"/>
+        <Label x:Name="lbl_DomeLightSwitch" Content="Dome&#xD;&#xA;Light" HorizontalAlignment="Left" Margin="12,208,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.41,0.791" FontWeight="Bold" Height="36" Width="40" FontSize="9"/>
+        <Label x:Name="lbl_Ignition" Content="Ignition" HorizontalAlignment="Left" Margin="9,48,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="23" Width="46" FontSize="9" RenderTransformOrigin="0.549,0.271"/>
+        <Label x:Name="lbl_HeadLightsSwitch" Content="Head&#xD;&#xA;Lights&#xA;" HorizontalAlignment="Left" Margin="144,207,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="34" Width="41" FontSize="9" RenderTransformOrigin="0.786,0.497"/>
+        <Label x:Name="lbl_BrakePedal" Content="Brake Pedal" HorizontalAlignment="Left" Margin="73,48,0,0" VerticalAlignment="Top" Width="63" FontWeight="Bold" Height="21" FontSize="9"/>
+        <Label x:Name="lbl_DriverSeat" Content="Driver &#xD;&#xA;Seat" HorizontalAlignment="Left" Margin="73,207,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="34" Width="53" FontSize="9"/>
+        <Label x:Name="lbl_SeatBelt" Content="Seat Belt" HorizontalAlignment="Left" Margin="144,143,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="22" Width="56" FontSize="9"/>
+        <RadioButton x:Name="btn_DD_opt_Closed" Content="Closed" HorizontalAlignment="Left" Margin="216,170,0,0" VerticalAlignment="Top" GroupName="DriverDoorButton" IsChecked="True" Checked="btn_DD_opt_Closed_Checked" Height="16" Width="54" FontSize="8" RenderTransformOrigin="0.701,0.592" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="19"/>
+        <RadioButton x:Name="btn_DD_opt_Open" Content="Open" HorizontalAlignment="Left" Margin="216,186,0,0" VerticalAlignment="Top" GroupName="DriverDoorButton" Checked="btn_DD_opt_Open_Checked" Unchecked="btn_DD_opt_Open_Unchecked" Height="15" Width="47" FontSize="8" RenderTransformOrigin="0.851,0.533" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="20"/>
+        <RadioButton x:Name="btn_HLS_opt_On" Content="On" HorizontalAlignment="Left" Margin="150,256,0,0" VerticalAlignment="Top" GroupName="HeadLightsSwitchButton" Checked="btn_HLS_opt_On_Checked" Height="15" Width="34" FontSize="8" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="27"/>
+        <RadioButton x:Name="btn_HLS_opt_Off" Content="Off" HorizontalAlignment="Left" Margin="150,241,0,0" VerticalAlignment="Top" GroupName="HeadLightsSwitchButton" IsChecked="True" Checked="btn_HLS_opt_Off_Checked" Height="15" Width="34" FontSize="8" RenderTransformOrigin="0.495,1.317" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="26"/>
+        <RadioButton x:Name="btn_DLS_opt_On" Content="On" HorizontalAlignment="Left" Margin="15,257,0,0" VerticalAlignment="Top" GroupName="DomeLightButton" Checked="btn_DLS_opt_On_Checked" Height="15" Width="32" FontSize="8" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="22"/>
+        <RadioButton x:Name="btn_DLS_opt_Off" Content="Off" HorizontalAlignment="Left" Margin="15,241,0,0" VerticalAlignment="Top" GroupName="DomeLightButton" IsChecked="True" Checked="btn_DLS_opt_Off_Checked" Height="15" Width="38" FontSize="8" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="21"/>
+        <RadioButton x:Name="btn_DLS_opt_Auto" Content="Auto" HorizontalAlignment="Left" Margin="15,272,0,0" VerticalAlignment="Top" GroupName="DomeLightButton" Checked="btn_DLS_opt_Auto_Checked" Height="15" Width="43" FontSize="8" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="23"/>
+        <RadioButton x:Name="btn_BP_opt_Pressed" HorizontalAlignment="Left" Margin="79,87,0,0" VerticalAlignment="Top" GroupName="BrakePedalButton" Content="Pressed" Checked="btn_BP_opt_Pressed_Checked" Height="15" Width="57" FontSize="8" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="5"/>
+        <RadioButton x:Name="btn_BP_opt_Released" Content="Released" HorizontalAlignment="Left" Margin="79,70,0,0" VerticalAlignment="Top" GroupName="BrakePedalButton" IsChecked="True" Checked="btn_BP_opt_Released_Checked" Height="15" Width="62" FontSize="8" VerticalContentAlignment="Center" RenderTransformOrigin="0.495,1.263" FontWeight="DemiBold" TabIndex="4"/>
+        <RadioButton x:Name="btn_DS_opt_Occupied" HorizontalAlignment="Left" Margin="78,257,0,0" VerticalAlignment="Top" GroupName="DriverSeatButton" Content="Occupied" Checked="btn_DS_opt_Occupied_Checked" Height="14" Width="56" FontSize="8" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="25"/>
+        <RadioButton x:Name="btn_DS_opt_Unoccupied" Content="Unoccupied" HorizontalAlignment="Left" Margin="78,241,0,0" VerticalAlignment="Top" GroupName="DriverSeatButton" IsChecked="True" Checked="btn_DS_opt_Unoccupied_Checked" Height="15" Width="64" FontSize="8" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="24"/>
+        <RadioButton x:Name="btn_SB_opt_Buckled" HorizontalAlignment="Left" Margin="146,186,0,0" VerticalAlignment="Top" GroupName="SeatBeltButton" Content="Buckled" Checked="btn_SB_opt_Buckled_Checked" Height="15" Width="61" FontSize="8" RenderTransformOrigin="0.78,1.768" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="18"/>
+        <RadioButton x:Name="btn_SB_opt_Unbuckled" Content="Unbuckled" HorizontalAlignment="Left" Margin="146,171,0,0" VerticalAlignment="Top" GroupName="SeatBeltButton" IsChecked="True" Checked="btn_SB_opt_Unbuckled_Checked" Height="15" Width="71" FontSize="8" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="17"/>
+        <RadioButton x:Name="btn_WW_opt_On" Content="On" HorizontalAlignment="Left" Margin="79,188,0,0" VerticalAlignment="Top" GroupName="WindshieldWiperButton" IsEnabled="False" Checked="btn_WW_opt_On_Checked" Height="15" Width="44" FontSize="8" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="16"/>
+        <RadioButton x:Name="btn_WW_opt_Off" Content="Off" HorizontalAlignment="Left" Margin="79,174,0,0" VerticalAlignment="Top" GroupName="WindshieldWiperButton" IsChecked="True" IsEnabled="False" Checked="btn_WW_opt_Off_Checked" RenderTransformOrigin="0.362,0.555" Height="15" Width="49" FontSize="8" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="15"/>
+        <RadioButton x:Name="btn_I_opt_Off" Content="Off" HorizontalAlignment="Left" Margin="14,90,0,0" VerticalAlignment="Top" GroupName="IgnitionButton" Checked="btn_I_opt_Off_Checked" Unchecked="btn_I_opt_Off_Unchecked" Height="16" Width="40" FontSize="8" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="1"/>
+        <RadioButton x:Name="btn_I_opt_NoKey" Content="No Key" HorizontalAlignment="Left" Margin="14,72,0,0" VerticalAlignment="Top" GroupName="IgnitionButton" IsChecked="True" Checked="btn_I_opt_NoKey_Checked" Height="14" Width="46" FontSize="8" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="0"/>
+        <RadioButton x:Name="btn_I_opt_Accessory" Content="Accessory" HorizontalAlignment="Left" Margin="14,108,0,0" VerticalAlignment="Top" GroupName="IgnitionButton" Checked="btn_I_opt_Accessory_Checked" IsEnabled="False" Height="15" Width="69" FontSize="8" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="2"/>
+        <RadioButton x:Name="btn_I_opt_On" Content="On" HorizontalAlignment="Left" Margin="14,124,0,0" VerticalAlignment="Top" GroupName="IgnitionButton" Checked="btn_I_opt_On_Checked" IsEnabled="False" Height="15" Width="37" FontSize="8" RenderTransformOrigin="0.485,0.736" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="3"/>
+        <RadioButton x:Name="btn_DW_opt_Down" Content="Down" HorizontalAlignment="Left" Margin="14,188,0,0" VerticalAlignment="Top" GroupName="DriverWindowButton" IsEnabled="False" Checked="btn_DW_opt_Down_Checked" Height="15" Width="48" FontSize="8" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="14"/>
+        <RadioButton x:Name="btn_DW_opt_Up" Content="Up" HorizontalAlignment="Left" Margin="14,174,0,0" VerticalAlignment="Top" GroupName="DriverWindowButton" IsChecked="True" IsEnabled="False" Checked="btn_DW_opt_Up_Checked" Height="15" Width="33" FontSize="8" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="13"/>
+        <RadioButton x:Name="btn_GS_opt_Reverse" Content="Reverse" HorizontalAlignment="Left" Margin="145,88,0,0" VerticalAlignment="Top" GroupName="GearShiftButton" IsEnabled="False" Checked="btn_GS_opt_Reverse_Checked" Height="14" Width="65" FontSize="8" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="7"/>
+        <RadioButton x:Name="btn_GS_opt_Park" Content="Park" HorizontalAlignment="Left" Margin="145,70,0,0" VerticalAlignment="Top" GroupName="GearShiftButton" IsChecked="True" IsEnabled="False" Checked="btn_GS_opt_Park_Checked" Height="15" Width="44" FontSize="8" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="6"/>
+        <RadioButton x:Name="btn_GS_opt_Neutral" Content="Neutral" HorizontalAlignment="Left" Margin="145,106,0,0" VerticalAlignment="Top" GroupName="GearShiftButton" IsEnabled="False" Checked="btn_GS_opt_Neutral_Checked" Height="14" Width="54" FontSize="8" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="8"/>
+        <RadioButton x:Name="btn_GS_opt_Drive" Content="Drive" HorizontalAlignment="Left" Margin="145,124,0,0" VerticalAlignment="Top" GroupName="GearShiftButton" IsEnabled="False" Checked="btn_GS_opt_Drive_Checked" Height="15" Width="51" FontSize="8" RenderTransformOrigin="0.647,0.568" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="9"/>
+        <RadioButton x:Name="btn_TS_opt_Left" Content="Left" HorizontalAlignment="Left" Margin="212,87,0,0" VerticalAlignment="Top" GroupName="TurnSignalButton" IsEnabled="False" Checked="btn_TS_opt_Left_Checked" Height="15" Width="46" FontSize="8" RenderTransformOrigin="0.53,0.122" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="11"/>
+        <RadioButton x:Name="btn_TS_opt_Off" Content="Off" HorizontalAlignment="Left" Margin="212,70,0,0" VerticalAlignment="Top" GroupName="TurnSignalButton" IsChecked="True" IsEnabled="False" Checked="btn_TS_opt_Off_Checked" Height="15" Width="46" FontSize="8" RenderTransformOrigin="0.767,0.503" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="10"/>
+        <RadioButton x:Name="btn_TS_opt_Right" Content="Right" HorizontalAlignment="Left" Margin="212,104,0,0" VerticalAlignment="Top" GroupName="TurnSignalButton" IsEnabled="False" Checked="btn_TS_opt_Right_Checked" Height="16" Width="49" FontSize="8" RenderTransformOrigin="0.779,0.625" VerticalContentAlignment="Center" FontWeight="DemiBold" TabIndex="12"/>
+        <Button x:Name="btn_Exit" Content="Exit" HorizontalAlignment="Left" Margin="222,268,0,0" VerticalAlignment="Top" Width="49" Height="22" Click="btn_Exit_Click" Background="#FFFEDCA9" BorderThickness="2,2,2,2" FontWeight="UltraBold" RenderTransformOrigin="0.656,0.965" FontSize="10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TabIndex="29"/>
+        <Image x:Name="img_DriveStick" HorizontalAlignment="Left" Height="132" Margin="617,226,0,0" VerticalAlignment="Top" Width="96" Source="ImageAssets/DriverStickP.jpg"/>
+        <Image x:Name="img_LightDome" HorizontalAlignment="Left" Height="105" Margin="327,12,0,0" VerticalAlignment="Top" Width="237" Source="ImageAssets/DomeLightOff.jpg"/>
+        <Image x:Name="img_KeyHole" HorizontalAlignment="Left" Height="126" Margin="602,94,0,0" VerticalAlignment="Top" Width="132" Source="ImageAssets/KeyholeNoKey.png" RenderTransformOrigin="0.732,0.51"/>
+        <Label x:Name="lbl_CarSimulation" Content="Car Simulation" HorizontalAlignment="Left" Margin="75,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.813" Width="119" FontWeight="UltraBold" Height="27" FontSize="14"/>
+        <Image x:Name="img_BrakeLights" HorizontalAlignment="Left" Height="50" Margin="598,366,0,0" VerticalAlignment="Top" Width="180" Source="ImageAssets/BrakeLightsOff.png"/>
+        <Image x:Name="img_DriverWindow" HorizontalAlignment="Left" Height="137" Margin="85,323,0,0" VerticalAlignment="Top" Width="116" Source="ImageAssets/DoorWindowUp.png"/>
+        <Image x:Name="img_Driver" HorizontalAlignment="Left" Height="77" Margin="394,339,0,0" VerticalAlignment="Top" Width="109" Source="ImageAssets/DriverNotinSeat.png"/>
+        <Image x:Name="img_wiper" HorizontalAlignment="Left" Height="96" Margin="400,116,0,0" VerticalAlignment="Top" Width="94" Source="ImageAssets/WiperIconLeft.png"/>
+        <Image x:Name="img_leftArrow" HorizontalAlignment="Left" Height="10" Margin="397,211,0,0" VerticalAlignment="Top" Width="10" Source="ImageAssets/Turn Signal Left.png" Visibility="Hidden" RenderTransformOrigin="0.938,0.709" />
+        <Image x:Name="img_rightArrow" HorizontalAlignment="Left" Height="10" Margin="468,211,0,0" VerticalAlignment="Top" Width="10" Source="ImageAssets/Turn Signal Right.png" Visibility="Hidden" RenderTransformOrigin="-7.367,-2.946" />
+        <Image x:Name="img_seatbeltWarning" HorizontalAlignment="Left" Height="14" Margin="400,221,0,0" VerticalAlignment="Top" Width="11" Source="ImageAssets/SeatbeltWarningIcon.png" RenderTransformOrigin="0.458,0.315" Visibility="Hidden"/>
+        <Image x:Name="img_doorOpen" HorizontalAlignment="Left" Height="48" Margin="423,241,0,0" VerticalAlignment="Top" Width="30" Source="ImageAssets/DoorOpenIcon.png" RenderTransformOrigin="0.989,0.589" Visibility="Hidden" />
+        <Image x:Name="img_Instrument_Panel_Off" HorizontalAlignment="Left" Height="262" Margin="271,139,0,0" VerticalAlignment="Top" Width="337" Source="ImageAssets/InstruPanelOff.png"/>
+        <Image x:Name="img_headlights" HorizontalAlignment="Left" Height="8" Margin="561,264,0,0" VerticalAlignment="Top" Width="19" Source="ImageAssets/HeadLightIcon.png" Visibility="Hidden" RenderTransformOrigin="0.3,0.478" />
+        <Button x:Name="btn_reset" Content="Reset" HorizontalAlignment="Left" Margin="222,241,0,0" VerticalAlignment="Top" Height="22" Width="49" FontWeight="UltraBold" Background="#FFF1E0F9" BorderThickness="2,2,2,2" Click="btn_reset_Click" FontSize="10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TabIndex="28"/>
+        <Label x:Name="lbl_image_DriverDoor" Content="Driver &#xD;&#xA;Window" HorizontalAlignment="Left" Margin="20,370,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="ExtraBold" Foreground="#FFFF00AF" Height="40" Width="65" RenderTransformOrigin="-0.719,0.095"/>
+        <Label x:Name="lbl_image_instrumentPanel" Content="Instrument Panel" HorizontalAlignment="Left" Margin="383,307,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="ExtraBold" Foreground="#FFFF00AF" Height="28" Width="154"/>
+        <Label x:Name="lbl_image_driverSeat" Content="Driver&#xD;&#xA;Seat" HorizontalAlignment="Left" Margin="352,364,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="ExtraBold" Foreground="#FFFF00AF" RenderTransformOrigin="1,0.42" Height="43" Width="62"/>
+        <Label x:Name="lbl_image_pedalBrakes" Content="Pedal&#xD;&#xA;Brakes" HorizontalAlignment="Left" Margin="529,364,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="ExtraBold" Foreground="#FFFF00AF" RenderTransformOrigin="1,0.42" Height="56" Width="69"/>
+        <Label x:Name="lbl_image_gearShift" Content="Gear&#xD;&#xA;Shift" HorizontalAlignment="Left" Margin="718,248,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="ExtraBold" Foreground="#FFFF00AF" RenderTransformOrigin="1,0.42" Height="48" Width="64"/>
+        <Label x:Name="lbl_image_keyHole" Content="Ignition&#xA;Keyhole" HorizontalAlignment="Left" Margin="728,135,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="ExtraBold" Foreground="#FFFF00AF" RenderTransformOrigin="1,0.42" Height="51" Width="76"/>
+        <Label x:Name="lbl_image_windshieldWiper" Content="Windshield&#xD;&#xA;Wiper" HorizontalAlignment="Left" Margin="491,133,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="ExtraBold" Foreground="#FFFF00AF" RenderTransformOrigin="1,0.42" Height="51" Width="101"/>
+        <Label x:Name="lbl_image_domeLightSwitch" Content="Dome Light&#xD;&#xA;Switch" HorizontalAlignment="Left" Margin="564,28,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="ExtraBold" Foreground="#FFFF00AF" RenderTransformOrigin="1,0.42" Height="49" Width="106"/>
+
+    </Grid>
+</Window>
